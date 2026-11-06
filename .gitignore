@@ -1,3 +1,15 @@
+# Repositórios oficiais da Microsoft: baixados por scripts/preparar_modulos.py, nunca republicados
+01-aml-cli-foundation/mslearn-aml-cli/
+02-cicd-github-actions/mslearn-mlops/
+03-genaiops-ai-foundry/mslearn-genaiops/
+04-enterprise-iac-bicep/mlops-v2/
+05-advanced-rag-architecture/azure-search-openai-demo/
+referencias/
+
+# Documentação oficial bruta: baixada por scripts/atualizar_docs_oficiais.py
+*/leituras/
+docs_oficiais/
+
 # Credenciais e IDs reais: nunca versionar
 config.json
 .env
