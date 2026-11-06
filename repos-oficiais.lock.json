@@ -1,0 +1,53 @@
+{
+  "_comentario": "Versao fixada de cada repositorio oficial. Atualize so com: python scripts/preparar_modulos.py all --atualizar",
+  "repos": [
+    {
+      "modulo": "01",
+      "nome": "mslearn-aml-cli",
+      "url": "https://github.com/MicrosoftLearning/mslearn-aml-cli.git",
+      "destino": "01-aml-cli-foundation/mslearn-aml-cli",
+      "commit": "191e8804f8005b2cad8eb4230ffb7cf5ada14068",
+      "sparse": null
+    },
+    {
+      "modulo": "02",
+      "nome": "mslearn-mlops",
+      "url": "https://github.com/MicrosoftLearning/mslearn-mlops.git",
+      "destino": "02-cicd-github-actions/mslearn-mlops",
+      "commit": "87482bc76b9ffa665e6ce6b76746d31e7a164b01",
+      "sparse": null
+    },
+    {
+      "modulo": "03",
+      "nome": "mslearn-genaiops",
+      "url": "https://github.com/MicrosoftLearning/mslearn-genaiops.git",
+      "destino": "03-genaiops-ai-foundry/mslearn-genaiops",
+      "commit": "eee0bae0d9dbf8df7360bb19fa78b3873ee09d7d",
+      "sparse": null
+    },
+    {
+      "modulo": "04",
+      "nome": "mlops-v2",
+      "url": "https://github.com/Azure/mlops-v2.git",
+      "destino": "04-enterprise-iac-bicep/mlops-v2",
+      "commit": "85fe72214bf5f9c9064984c00dc818c046599215",
+      "sparse": null
+    },
+    {
+      "modulo": "05",
+      "nome": "azure-search-openai-demo",
+      "url": "https://github.com/Azure-Samples/azure-search-openai-demo.git",
+      "destino": "05-advanced-rag-architecture/azure-search-openai-demo",
+      "commit": "558ffd397eddcfe4da5c85ebc285796b367eb9b2",
+      "sparse": null
+    },
+    {
+      "modulo": "ref",
+      "nome": "azureml-examples",
+      "url": "https://github.com/Azure/azureml-examples.git",
+      "destino": "referencias/azureml-examples",
+      "commit": "27f4487a6060b80982ef0793e6ebcea90f509d37",
+      "sparse": ["cli/jobs", "cli/endpoints", "sdk/python/using-mlflow", "sdk/python/endpoints/online/managed"]
+    }
+  ]
+}
