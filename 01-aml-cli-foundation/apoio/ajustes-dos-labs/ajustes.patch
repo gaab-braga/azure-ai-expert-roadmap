@@ -1,0 +1,65 @@
+diff --git a/Allfiles/Labs/02/basic-job/basic-job.yml b/Allfiles/Labs/02/basic-job/basic-job.yml
+index 69186be..4b1fd9c 100644
+--- a/Allfiles/Labs/02/basic-job/basic-job.yml
++++ b/Allfiles/Labs/02/basic-job/basic-job.yml
+@@ -3,6 +3,6 @@ code: src
+ command: >-
+   python main.py 
+ environment: azureml:basic-env-scikit@latest
+-compute: azureml:<your-compute-instance-name>
++compute: azureml:testdev-vm
+ experiment_name: diabetes-example
+ description: Train a Logistic Regression classification model on the diabetes dataset that is stored locally.
+\ No newline at end of file
+diff --git a/Allfiles/Labs/02/input-data-job/data-job.yml b/Allfiles/Labs/02/input-data-job/data-job.yml
+index 2b9fbc6..92eaeec 100644
+--- a/Allfiles/Labs/02/input-data-job/data-job.yml
++++ b/Allfiles/Labs/02/input-data-job/data-job.yml
+@@ -8,6 +8,6 @@ inputs:
+     path: azureml:diabetes-data:1
+     mode: ro_mount
+ environment: azureml:basic-env-scikit@latest
+-compute: azureml:<your-compute-instance-name>
++compute: azureml:testdev-vm
+ experiment_name: diabetes-data-example
+ description: Train a classification model on diabetes data using a registered dataset as input.
+\ No newline at end of file
+diff --git a/Allfiles/Labs/02/sweep-job/sweep-job.yml b/Allfiles/Labs/02/sweep-job/sweep-job.yml
+index abbbeb4..746a5a6 100644
+--- a/Allfiles/Labs/02/sweep-job/sweep-job.yml
++++ b/Allfiles/Labs/02/sweep-job/sweep-job.yml
+@@ -13,7 +13,7 @@ inputs:
+   diabetes:
+     path: azureml:diabetes-data:1
+     mode: ro_mount
+-compute: azureml:aml-cluster
++compute: azureml:testdev-vm
+ search_space:
+   learning_rate:
+     type: choice
+@@ -25,8 +25,8 @@ objective:
+   primary_metric: training_roc_auc_score
+   goal: maximize
+ limits:
+-  max_total_trials: 6
+-  max_concurrent_trials: 3
+-  timeout: 3600
++  max_total_trials: 2
++  max_concurrent_trials: 1
++  timeout: 7200
+ experiment_name: diabetes-sweep-example
+ description: Run a hyperparameter sweep job for classification on diabetes dataset.
+\ No newline at end of file
+diff --git a/Allfiles/Labs/03/mlflow-job/mlflow-job.yml b/Allfiles/Labs/03/mlflow-job/mlflow-job.yml
+index bd4c201..c75fc17 100644
+--- a/Allfiles/Labs/03/mlflow-job/mlflow-job.yml
++++ b/Allfiles/Labs/03/mlflow-job/mlflow-job.yml
+@@ -8,6 +8,6 @@ inputs:
+     path: azureml:diabetes-data:1
+     mode: ro_mount
+ environment: azureml:basic-env-scikit@latest
+-compute: azureml:<your-compute-instance-name>
++compute: azureml:testdev-vm
+ experiment_name: diabetes-mlflow-example
+ description: Train a classification model on diabetes data using a registered dataset as input. Use MLflow to track parameter, metric, and artifact.
+\ No newline at end of file

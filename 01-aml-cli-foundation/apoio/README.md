@@ -20,6 +20,12 @@ cd mslearn-aml-cli && git checkout 191e8804f8005b2cad8eb4230ffb7cf5ada14068 && c
 
 (O commit é o que está em [repos-oficiais.lock.json](../../repos-oficiais.lock.json).)
 
+## Ajustes que os labs pedem
+
+Alguns YAMLs do lab precisam ser editados, como o nome da compute. Faça as edições **no clone do
+Cloud Shell**, nunca na cópia de referência. As que eu já fiz estão em
+[ajustes-dos-labs/](ajustes-dos-labs/README.md), com o motivo de cada uma e um `.patch` para reaplicar.
+
 ## Recriar o ambiente
 
 Os labs 02 a 06 pressupõem que o lab 01 já foi feito. Se você apagou os recursos entre uma sessão e
