@@ -1,0 +1,27 @@
+# Credenciais e IDs reais: nunca versionar
+config.json
+.env
+*.env
+.azure/
+*.publishsettings
+**/secrets*
+
+# Parâmetros locais com valores reais (versione só o *.example)
+*.local.bicepparam
+*.local.yml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Saídas de execução
+outputs/
+mlruns/
+*.log
+
+# Editor / SO
+.vscode/settings.json
+.DS_Store
+Thumbs.db
